@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="utf-8">
-  <title>Sexy Add to List</title>
+    <meta charset="utf-8">
+    <title>Sexy Add to List</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  
-  <p>Bonkers! Winning!</p>
-  
+    <div id="wrapper">
+        <input type="text" maxlength="33" placeholder="+ Add item">
+        
+        <h2>TODO</h2>
+        <ul id="todo-list">
+            <li>Implement localStorage</li>
+            <li>Add delete functionality</li>
+            <li>Refactor</li>
+        </ul>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
