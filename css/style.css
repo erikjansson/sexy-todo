@@ -1,0 +1,78 @@
+/* Minimalist reset, baby */
+body, p, ul, li, h2 { margin: 0; padding: 0; }
+ul { list-style: none;}
+
+body, html{ height: 100%; }
+
+body{
+    font: 17px sans-serif;
+    background: #333;
+    color: #002b40;
+}
+
+h2{
+    position: absolute;
+    top: 40px;
+    right: -10px;
+    color: #cde181;
+    text-shadow: -1px 0 0 #f9ffdf; /* accounts for the text being rotated 90° */
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+#wrapper{
+    width: 500px;
+    margin: 70px auto;
+    padding: 50px 40px;
+    background: #d8ec90;
+    box-shadow: 0 0 3px rgba(84, 116, 0, 0.6);
+    position: relative;
+}
+
+input, .moving-item, #todo-list{
+    width: 250px;
+    margin: 0 auto;
+    font: 17px sans-serif;
+}
+
+input, .moving-item{
+    display: block;
+    padding: 5px 20px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -145px;
+}
+
+#todo-list li, .moving-item{
+    padding: 5px 20px;
+}
+
+input{
+    border: none;
+    background: #f7f7f7;
+    color: #002b40;
+    text-indent: -1px; /* hack for the extra pixel the input's anonymous div applies: http://stackoverflow.com/a/5952545/352375 */
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 0 0 3px rgba(84, 116, 0, 0.4);
+}
+
+#todo-list{
+    width: 290px;
+    margin: 60px auto 0;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#wrapper, #todo-list, input{
+    border-radius: 2px;
+}
+
+input::-webkit-input-placeholder{ color: #002b40; }
+input:-moz-placeholder{ color: #002b40; }
