@@ -28,7 +28,7 @@ $(function(){
         var $list = $('#todo-list').css('visibility', 'visible');
 
         $input
-            .after('<li class="moving-item">'+ $input.val() +'</li>')
+            .after('<li class="moving-item">'+ $input.val() +'<span class="delete">+<span></li>')
             .val('');
 
         $list.animate({
@@ -45,9 +45,18 @@ $(function(){
             $listItem = $(this);
 
             $(this).prependTo($list).removeClass('moving-item');
-            $list.css('padding-top', 10);
+            $list.css({
+                'padding-top': 10
+            });
 
             List.save();
         });
+    });
+
+    $('#todo-list').delegate('.delete', 'click', function(){
+       $(this).parent('li').slideUp(function(){
+           $(this).remove();
+           List.save();
+       });
     });
 });

@@ -74,5 +74,26 @@ input:focus{
     border-radius: 2px;
 }
 
+#todo-list li{
+}
+
+.delete{
+    display: none;
+    float: right;
+    font: bold 23px/17px sans-serif;
+    cursor: pointer;
+    color: #545c35;
+    text-shadow: 0 1px 0 #f9ffdf;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#todo-list li:hover .delete{
+    display: inline-block;
+}
+
 input::-webkit-input-placeholder{ color: #002b40; }
 input:-moz-placeholder{ color: #002b40; }
