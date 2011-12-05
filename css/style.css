@@ -100,10 +100,11 @@ input:focus{
     display: block;
     margin: 5px auto;
     text-align: center;
-    color: #b4c671;
+    color: #c4d77a;
     text-decoration: none;
     text-shadow: 0 1px 0 #f9ffdf;
     font-size: 15px;
+    font-weight: bold;
     cursor: pointer;
 }
 
