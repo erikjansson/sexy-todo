@@ -1,5 +1,22 @@
+var List = {
+    populate: function(){
+        if(localStorage.getItem('sexy-todo'))
+            $('#todo-list').html(localStorage.getItem('sexy-todo'));
+    },
+
+    save: function(){
+        localStorage.setItem('sexy-todo', $('#todo-list').html());
+    },
+
+    clear: function(){
+        localStorage.removeItem('sexy-todo');
+    }
+};
+
 $(function(){
     var duration = 300;
+
+    List.populate();
 
     $('input').keyup(function(e){
         var $input = $(this);
@@ -29,6 +46,8 @@ $(function(){
 
             $(this).prependTo($list).removeClass('moving-item');
             $list.css('padding-top', 10);
+
+            List.save();
         });
     });
 });
