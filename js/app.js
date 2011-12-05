@@ -1,7 +1,7 @@
 var List = {
     populate: function(){
-        if(localStorage.getItem('sexy-todo'))
-            $('#todo-list').html(localStorage.getItem('sexy-todo'));
+        var data = localStorage.getItem('sexy-todo') || '';
+        $('#todo-list').html(data);
     },
 
     save: function(){
