@@ -59,4 +59,10 @@ $(function(){
            List.save();
        });
     });
+
+    $('#clear-list').click(function(e){
+        e.preventDefault();
+        List.clear();
+        List.populate();
+    });
 });

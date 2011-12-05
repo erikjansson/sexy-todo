@@ -95,5 +95,17 @@ input:focus{
     display: inline-block;
 }
 
+#clear-list{
+    width: 290px;
+    display: block;
+    margin: 5px auto;
+    text-align: center;
+    color: #b4c671;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #f9ffdf;
+    font-size: 15px;
+    cursor: pointer;
+}
+
 input::-webkit-input-placeholder{ color: #002b40; }
 input:-moz-placeholder{ color: #002b40; }
