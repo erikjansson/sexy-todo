@@ -24,30 +24,26 @@ $(function(){
         // only execute the script when hitting [return] and make sure the input isn't blank
         if(e.keyCode != 13 || $input.val() == '')
             return;
+
+        // insert the input value in a list item (positioned exactly over the input), then empty the input
+        $input.after('<li class="moving-item">'+ $input.val() +'<span class="delete">+<span></li>').val('');
         
         var $list = $('#todo-list').css('visibility', 'visible');
-
-        $input
-            .after('<li class="moving-item">'+ $input.val() +'<span class="delete">+<span></li>')
-            .val('');
-
+        var liHeight = $('.moving-item').outerHeight();
+        var origPaddingTop = parseInt($list.css('padding-top'));
+        var distance = $list.position().top + parseInt($list.css('margin-top')) + origPaddingTop;
+        
         $list.animate({
-           paddingTop: 41 
-        }, duration)
-        .find('li').animate({
-            position: 'relative',
-            top: 31
+           paddingTop: origPaddingTop + liHeight
         }, duration);
 
         $('.moving-item').animate({
-            top: 120
+            top: distance
         }, duration, function(){
             $listItem = $(this);
 
             $(this).prependTo($list).removeClass('moving-item');
-            $list.css({
-                'padding-top': 10
-            });
+            $list.css('padding-top', origPaddingTop);
 
             List.save();
         });

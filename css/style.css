@@ -24,18 +24,22 @@ h2{
 }
 
 #wrapper{
-    width: 500px;
+    width: 400px;
     margin: 70px auto;
-    padding: 50px 40px;
+    padding: 50px;
     background: #d8ec90;
     box-shadow: 0 0 3px rgba(84, 116, 0, 0.6);
     position: relative;
 }
 
 input, .moving-item, #todo-list{
-    width: 250px;
+    width: 350px;
     margin: 0 auto;
     font: 17px sans-serif;
+}
+
+input{
+    width: 310px;
 }
 
 input, .moving-item{
@@ -43,8 +47,7 @@ input, .moving-item{
     padding: 5px 20px;
     position: absolute;
     top: 50px;
-    left: 50%;
-    margin-left: -145px;
+    left: 50px;
 }
 
 #todo-list li, .moving-item{
@@ -64,17 +67,13 @@ input:focus{
 }
 
 #todo-list{
-    width: 290px;
-    margin: 60px auto 0;
+    margin: 60px 0 0;
     padding: 10px 0;
     background: rgba(255, 255, 255, 0.3);
 }
 
 #wrapper, #todo-list, input{
     border-radius: 2px;
-}
-
-#todo-list li{
 }
 
 .delete{
@@ -96,9 +95,9 @@ input:focus{
 }
 
 #clear-list{
-    width: 290px;
+    width: 350px;
     display: block;
-    margin: 5px auto;
+    margin: 5px 0;
     text-align: center;
     color: #c4d77a;
     text-decoration: none;
